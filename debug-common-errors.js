@@ -24,10 +24,10 @@ Think about which debugging methods you found most useful and how you might appl
 // Description:
 // This program is intended to display a simple prompt in the console but fails to run.
 
-console.log("Welcome to the bootcamp
+console.log("Welcome to the bootcamp");
 
-// What’s Wrong?
-
+// What’s Wrong? Syntax errors
+//This one has a few errors, 1.no closing parenthesis 2. no semicolon 3. no quotation
 
 // Program B
 // Description:
@@ -39,7 +39,9 @@ for (let i = 0; i < numbers.length; i++) {
   console.log(doubled);
 }
 
-// What’s Wrong?
+// What’s Wrong? runtime error
+// "eight" is a string and can't be converetd to a number
+
 
 
 
@@ -51,12 +53,14 @@ function isPrime(num) {
   if (num < 2) return false;
   for (let i = 2; i < num; i++) {
     if (num % i === 0) {
-      return true;  // Supposed to indicate num is NOT prime
+      return false;  // Supposed to indicate num is NOT prime
     }
   }
-  return false; // Supposed to indicate num IS prime
+  return true; // Supposed to indicate num IS prime
 }
 
 console.log(isPrime(7)); // Expected true but gets false
 
 // What’s Wrong?
+//when it is supposed to show that num is not isPrime, it needs to return false
+//when it is supposed to show that num is prime, it needs to return true
